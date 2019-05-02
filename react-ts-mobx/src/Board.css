@@ -1,0 +1,19 @@
+
+/* 
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items 
+  https://www.w3schools.com/cssref/pr_border.asp
+    border: 1px solid red;
+  https://vanseodesign.com/css/vertical-centering/
+
+*/
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 165px;
+}
+.box>* {
+  flex: 1 1 33%;
+  text-justify: center;
+  text-align: center;
+  vertical-align: middle;
+}
