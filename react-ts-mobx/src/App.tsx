@@ -4,7 +4,10 @@ import './App.css';
 import PokemonSearch from './components/PokemonSearch';
 
 function App() {
-  return <PokemonSearch name='John Smith' numberOfPokemons={2} />;
+  return <div>
+      <PokemonSearch name='John Smith' />
+      <PokemonSearch name='Bruno Mars' numberOfPokemons={2} />
+    </div>;
 }
 
 export default App;

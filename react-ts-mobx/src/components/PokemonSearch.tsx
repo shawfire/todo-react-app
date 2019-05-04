@@ -8,7 +8,7 @@ export default class PokemonSearch extends Component<User> {
     return (
       <div>
         <p style={{textAlign: "center"}}>
-          User: {name} has {numberOfPokemons} pokemons
+          User: {name} {numberOfPokemons && <span>has {numberOfPokemons} pokemons</span>}
         </p>
       </div>
     )
