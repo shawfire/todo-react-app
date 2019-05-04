@@ -1,6 +1,10 @@
 
 - [Create React App: Getting Started](https://facebook.github.io/create-react-app/docs/getting-started)
 
+```
+npx create-react-app react-js-mbox
+```
+
 <details><summary>create-react-app generated README.md</summary>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

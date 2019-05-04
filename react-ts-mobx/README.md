@@ -52,6 +52,10 @@ Experimental support for decorators is a feature that is subject to change in a 
 <details><summary>Using eslint</summary>
 </details>
 
+- []()
+
+- [pokeapi.co: Pokemon Restful api](http://pokeapi.co)
+
 
 
 <details><summary>create-react-app generated README.md</summary>
