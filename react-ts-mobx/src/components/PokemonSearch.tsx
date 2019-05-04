@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
+import User from '../interfaces/User.interface';
 
 
-
-export default class PokemonSearch extends Component<{name: string, numberOfPokemons: number}> {
+export default class PokemonSearch extends Component<User> {
   render() {
     const { name, numberOfPokemons } = this.props;
     return (
