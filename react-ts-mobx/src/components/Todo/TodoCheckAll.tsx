@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface Props {
-  anyRemaining: () => any,
-  checkAllTodos: () => any
+  anyRemaining: () => boolean,
+  checkAllTodos: () => void
 };
 
 const TodoCheckAll = ({anyRemaining, checkAllTodos}: Props) => {

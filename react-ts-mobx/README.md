@@ -4,6 +4,7 @@
   - [create-react-app with typescript](https://facebook.github.io/create-react-app/docs/adding-typescript)
 
   ```bash
+
   $npx create-react-app react-ts-mobx --typescript
   ```
 
@@ -14,7 +15,8 @@
 - [mobx](https://github.com/mobxjs/mobx)
 
 ```
-npm install --save mobx mobx-react
+npm run eject
+npm install --save mobx mobx-react babel-plugin-transform-decorators-legacy
 ```
 
 </details>
