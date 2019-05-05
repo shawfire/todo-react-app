@@ -1,11 +1,11 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
 import './Todo.css';
-import * as classnames from 'classnames';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import TodosRemaining from './TodosRemaining.tsx';
 import TodoItem from './TodoItem';
 import TodoCheckAll from './TodoCheckAll';
+import TodosFiltered from './TodosFiltered';
 
 class Todo extends Component {
   render() {
@@ -48,26 +48,7 @@ class Todo extends Component {
 
           <div className="extra-container">
             <div>
-              <button
-              onClick={() => this.updateFilter('all')}
-              className={classnames({'active': this.state.filter === 'all'})}
-              >
-                All
-              </button>
-
-              <button
-                onClick={() => this.updateFilter('active')}
-                className={classnames({ 'active': this.state.filter === 'active' })}
-              >
-                Active
-              </button>
-
-              <button
-                onClick={() => this.updateFilter('completed')}
-                className={classnames({ 'active': this.state.filter === 'completed' })}
-              >
-                Completed
-              </button>
+              <TodosFiltered updateFilter={this.updateFilter} filter={this.state.filter} />
             </div>
 
             <ReactCSSTransitionGroup
