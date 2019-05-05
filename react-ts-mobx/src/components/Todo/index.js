@@ -6,6 +6,10 @@ import TodosRemaining from './TodosRemaining.tsx';
 import TodoItem from './TodoItem';
 import TodoCheckAll from './TodoCheckAll';
 import TodosFiltered from './TodosFiltered';
+import TodosClearCompleted from './TodosClearCompleted';
+
+// reference: 
+//  - [React Todo App - Extracting Components - Part 3](https://www.youtube.com/watch?v=5H7GIZO-5Rk)
 
 class Todo extends Component {
   render() {
@@ -47,9 +51,10 @@ class Todo extends Component {
           </div>
 
           <div className="extra-container">
-            <div>
-              <TodosFiltered updateFilter={this.updateFilter} filter={this.state.filter} />
-            </div>
+            <TodosFiltered 
+              updateFilter={this.updateFilter} 
+              filter={this.state.filter} 
+            />
 
             <ReactCSSTransitionGroup
               transitionName="fade"
@@ -57,9 +62,7 @@ class Todo extends Component {
               transitionLeaveTimeout={300}
             >
             {this.todosCompletedCount() > 0 &&
-            <div>
-              <button onClick={this.clearCompleted}>Clear Completed</button>
-            </div>
+              <TodosClearCompleted clearCompleted={this.clearCompleted} />
             }
             </ReactCSSTransitionGroup>
 
