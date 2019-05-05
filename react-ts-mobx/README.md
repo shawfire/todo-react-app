@@ -19,7 +19,7 @@ npm install --save mobx mobx-react
 
 </details>
 
-<details><summary>Fix typescript</summary>
+<details><summary>Add decorator support for typescript</summary>
 
 [How to remove experimentalDecorators warning in VSCode](https://ihatetomatoes.net/how-to-remove-experimentaldecorators-warning-in-vscode/)
 
