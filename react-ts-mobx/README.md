@@ -91,6 +91,8 @@ npm install http-status-codes --save
 - [Shorthand Css margin properties TRBL - TRouBLe Top Right Bottom Left](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
 
 
+- [react-transition-group: An easy way to perform animations when a React component enters or leaves the DOM](https://github.com/reactjs/react-transition-group)
+
 <details><summary>create-react-app generated README.md</summary>
 
 - [react](https://reactjs.org/)

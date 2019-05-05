@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './Todo.css';
 import * as classnames from 'classnames';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import TodosRemaining from './TodosRemaining.tsx';
 
 class Todo extends Component {
   render() {
@@ -61,7 +62,8 @@ class Todo extends Component {
 
           <div className="extra-container">
             <div><label><input type="checkbox" checked={!this.anyRemaining()} onChange={this.checkAllTodos} /> Check All</label></div>
-            <div>{this.remaining()} items left</div>
+            {/* <div>{this.remaining()} items left</div> */}
+            <TodosRemaining remaining={this.remaining()} />
           </div>
 
           <div className="extra-container">
