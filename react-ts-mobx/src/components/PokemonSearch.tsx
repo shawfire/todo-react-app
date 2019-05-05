@@ -4,6 +4,10 @@ import User from '../interfaces/User.interface';
 
 interface SearchState {
   error: boolean,
+  pokemon: Pokemon
+}
+
+interface Pokemon {
   name: string,
   numberOfAbilities: number,
   baseExperience: number,
@@ -17,43 +21,44 @@ export default class PokemonSearch extends Component<User, SearchState> {
     super(props);
     this.state = {
       error: false,
-      name: '',
-      numberOfAbilities: 0,
-      baseExperience: 0,
-      imageUrl: ''
+      pokemon: null
     }
     this.pokemonRef = React.createRef();
   }
 
-  onSearchClick = () => {
+  onSearchClick = (): void => {
     const inputValue = this.pokemonRef.current.value;
     fetch(`https://pokeapi.co/api/v2/pokemon/${inputValue}`)
       .then( res => {
         if (res.status !== OK) {
           this.setState({ error: true })
-          throw new Error('Network response was not ok.');
+        } else {
+          res.json().then((data: any) => {
+            this.setState({
+              error: false,
+              pokemon: {
+                name: data.name,
+                numberOfAbilities: data.abilities.length,
+                baseExperience: data.base_experience,
+                imageUrl: data.sprites.front_default
+              }
+            });
+          });
         }
-        res.json();
-      }) 
-      .then((data: any) => {
-        this.setState({
-          error: false,
-          name: data.name,
-          numberOfAbilities: data.abilities.length,
-          baseExperience: data.base_experience,
-          imageUrl: data.sprites.front_default
-        })
-      }).catch((error) => this.setState({ error: true }));
+      });
   }
 
   render() {
     const { name: userName, numberOfPokemons } = this.props;
-    const { error, name, numberOfAbilities, baseExperience, imageUrl } = this.state;
+    const { error, pokemon } = this.state;
+    
     let resultMarkup;
 
     if (error) {
       resultMarkup = <p>Pokemon not found, please try again</p>
-    } else {
+    } else if (this.state.pokemon) {
+      const { name, numberOfAbilities, baseExperience, imageUrl } = pokemon;
+
       resultMarkup = <div>
         <img src={imageUrl} alt="pokemon" className="pokemon-image" />
         <p>
