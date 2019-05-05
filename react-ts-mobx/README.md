@@ -93,6 +93,45 @@ npm install http-status-codes --save
 
 - [react-transition-group: An easy way to perform animations when a React component enters or leaves the DOM](https://github.com/reactjs/react-transition-group)
 
+<details><summary>Stateless functional component</summary>
+
+```javascript
+// TodosRemaining.tsx: Typescript
+import React from 'react';
+
+interface Props {
+  remaining: number
+}
+
+const TodosRemaining = ({remaining}: Props) => {
+  return (
+    <div>
+      {remaining} items left
+    </div>
+  );
+};
+
+export default TodosRemaining;
+```
+
+```javascript
+// TodosRemaining.jsx: Javascript with propTypes validation
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const TodosRemaining = ({ remaining }) => {
+  return <div>{remaining} items left</div>;
+};
+
+TodosRemaining.propTypes = {
+  remaining: PropTypes.number.isRequired
+};
+
+export default TodosRemaining;
+```
+</details>
+
+
 <details><summary>create-react-app generated README.md</summary>
 
 - [react](https://reactjs.org/)
