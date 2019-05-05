@@ -52,10 +52,43 @@ Experimental support for decorators is a feature that is subject to change in a 
 <details><summary>Using eslint</summary>
 </details>
 
-- []()
+<details><summary>Accessing pokeaoi.api</summary>
 
 - [pokeapi.co: Pokemon Restful api](http://pokeapi.co)
 
+- Error: Object is possibly 'null'.ts(2531)
+
+- Fix: change tsconfig.json as follows:
+
+```
+{
+  "compilerOptions": {
+    ...
+    "strictNullChecks": false
+    ... 
+```
+
+- [http-status-codes with types](https://www.npmjs.com/package/http-status-codes)
+- [types for http-status-codes included in module](https://www.npmjs.com/package/@types/http-status-codes)
+
+```
+npm install http-status-codes --save
+```
+
+- [Using fetch, error handling](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
+- [TypeScript definitions for pokedex-promise-v2 and PokeAPI endpoints.](https://github.com/mudkipme/pokeapi-v2-typescript)
+
+- [pokeapi-type-generator](https://github.com/ccabrales/pokeapi-type-generator)
+
+- [End-to-end typing for REST APIs with TypeScript](https://github.com/rawrmaan/restyped)
+
+- [Production ready Node.js REST API Setup using TypeScript, PostgreSQL and Redis.](https://itnext.io/production-ready-node-js-rest-apis-setup-using-typescript-postgresql-and-redis-a9525871407)
+
+</details>
+
+
+- [Shorthand Css margin properties TRBL - TRouBLe Top Right Bottom Left](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
 
 
 <details><summary>create-react-app generated README.md</summary>

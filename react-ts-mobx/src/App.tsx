@@ -7,7 +7,7 @@ function App() {
   return <div>
       <PokemonSearch name='John Smith' />
       <PokemonSearch name='Bruno Mars' numberOfPokemons={2} />
-    </div>;
+    </div>; 
 }
 
 export default App;
